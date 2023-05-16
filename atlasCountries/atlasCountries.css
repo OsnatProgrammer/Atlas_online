@@ -1,0 +1,145 @@
+/* #686056 */
+* {
+    font-family: 'Alkatra', cursive;
+    color:  #68605696;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+body {
+    background-image: url("/images/background2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: unset;
+}
+
+.position {
+    position: fixed;
+    bottom: 12px;
+    right: 15px;
+    z-index: 10;
+    border:  #68605696 2px solid;
+    background-color: #e6d7c1;
+    padding: 5px 8px;
+    line-height: 1;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 300ms ease;
+}
+
+.position:hover {
+    transition: all 300ms ease;
+    transform: scale(1.2);
+}
+
+nav {
+    background: #68605696;
+    /* background:  #68605696; */
+    color: #e6d7c1;
+    box-shadow: 1px 2px 10px 1px #000;
+
+}
+
+.flag {
+    border-radius: 10px 10px 10px 10px;
+}
+
+.showDetails {
+    box-shadow: 1px 0px 10px 1px #302d2d;
+    border-radius: 10px 10px 10px 10px;
+    cursor: pointer;
+
+}
+
+
+.caption-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* top: 39%; */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(1.5px);
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    border:  #68605696 2px solid;
+}
+
+iframe {
+    border-radius: unset;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #e6d7c1;
+    transition: 1000ms;
+    margin: 0 auto;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+#ul_nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#ul_nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#ul_nav li a {
+    text-decoration: none;
+    transform: scale(1);
+}
+
+.form-control,
+.form-select,
+#id_input:focus {
+    color: #68605696;
+    border:  #68605696 1px solid;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#id_input::placeholder {
+    color:  #68605696;
+}
+
+
+@media (max-width:768px) {
+    #ul_nav li {
+        display: block;
+        text-decoration: none;
+        padding: 8px;
+    }
+    #ul_nav li a:hover {
+        /* transition: transform 400ms ease-out; */
+        transform: scale(1.25);
+    }
+
+    nav a:hover::after {
+        width: 0%;
+    }
+}
