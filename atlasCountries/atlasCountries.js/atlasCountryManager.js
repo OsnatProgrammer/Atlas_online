@@ -66,7 +66,6 @@ export const createCountryByName = (name) => {
     document.querySelector("#id_row").innerHTML = "";
     let flag = false;
 
-    // Check if any of the filtered countries match the exact name
     arr.forEach(item => {
         if (item.name.common == name) {
             let country = new AtlasCountry("#id_row", item);
@@ -81,7 +80,7 @@ export const createCountryByName = (name) => {
             country.renderStart();
         });
     } else if (!flag) {
-        document.querySelector("#id_row").innerHTML = `<h1 class="text-center m-5" style="color:#686056">Country ${name} is not found</h1>`;
+        document.querySelector("#id_row").innerHTML = `<h1 class="text-center m-5" style="color:#686056">Country ${name} is not found  :(</h1>`;
     }
     document.querySelector("#id_load").classList.add("d-none");
 }
